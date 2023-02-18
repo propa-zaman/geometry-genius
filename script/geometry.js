@@ -1,4 +1,6 @@
 
+
+// calculate the geometrical value
 document.getElementById('btn-calculate-triangle').addEventListener('click', function(){
 
     const triangleBase = getInputFieldValueById('triangle-base');
@@ -29,6 +31,48 @@ document.getElementById('btn-calculate-rectangle').addEventListener('click', fun
     setTextElementValueById('rectangle-area', rectangleAreaFixed);
 })
 
+document.getElementById('btn-calculate-parallelogram').addEventListener('click', function(){
+    const paraBase = getInputFieldValueById('para-base');
+    const paraHeight = getInputFieldValueById('para-height');
+
+    const parallelogramArea = paraBase * paraHeight;
+    const parallelogramAreaFixed = parallelogramArea.toFixed(2);
+
+    setTextElementValueById('parallelogram-area', parallelogramAreaFixed);
+})
+
+document.getElementById('btn-calculate-rhombus').addEventListener('click', function(){
+    const rhombusD1 = getInputFieldValueById('rhombus-d1');
+    const rhombusD2 = getInputFieldValueById('rhombus-d2');
+
+    const rhombusArea = rhombusD1 * rhombusD2;
+    const rhombusAreaFixed = rhombusArea.toFixed(2);
+
+    setTextElementValueById('rhombus-area', rhombusAreaFixed);
+})
+
+document.getElementById('btn-calculate-pentagon').addEventListener('click', function(){
+    const pentagonP = getInputFieldValueById('pentagon-p');
+    const pentagonB = getInputFieldValueById('pentagon-b');
+
+    const pentagonArea = pentagonP * pentagonB;
+    const pentagonAreaFixed = pentagonArea.toFixed(2);
+
+    setTextElementValueById('pentagon-area', pentagonAreaFixed);
+})
+
+document.getElementById('btn-calculate-ellipse').addEventListener('click', function(){
+    const ellipseA = getInputFieldValueById('ellipse-a');
+    const ellipseB = getInputFieldValueById('ellipse-b');
+
+    const ellipseArea = ellipseA * ellipseB;
+    const ellipseAreaFixed = ellipseArea.toFixed(2);
+
+    setTextElementValueById('ellipse-area', ellipseAreaFixed);
+})
+
+
+// generate random color
 document.getElementById('random-triangle-color').addEventListener('mouseover', function(){
     document.getElementById('random-triangle-color').style.backgroundColor = randomColor();
 })
