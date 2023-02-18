@@ -78,12 +78,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Parallelogram</h5>
                         <p class="card-text">Area (A) = b * h</p>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="b" id="para-base">
-                            <span class="input-group-text">cm</span>
-                            <input type="text" class="form-control" placeholder="h" id="para-height">
-                            <span class="input-group-text">cm</span>
-                        </div>
+                        <p class="card-text">b = 10cm, h = 12cm</p>
                         <a href="#" id="btn-calculate-parallelogram" class="btn btn-info d-grid col-12">Calculate</a>
                     </div>
                 </div>
@@ -91,16 +86,16 @@
             </div>
             <div class="col">
                 <!-- Area Calculation card start-->
-                <div class="card" style="width: 24rem;">
+                <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Area Calculation</h5>
 
-                        <table class="p-5">
+                        <table class="p-5" id="add-iteam">
                             <tr>
                                 <td>1.</td>
                                 <td>Triangle</td>
                                 <td><span id="triangle-area">00</span>cm<sup>2</sup></td>
-                                <td class="p-3"><button class="btn btn-info btn-sm">convert to m<sup>2</sup></button></td>
+                                <td><button class="btn btn-info btn-sm">convert to m<sup>2</sup></button></td>
                             </tr>
                             <tr>
                                 <td>2.</td>
@@ -109,39 +104,6 @@
                                 <td><button class="btn btn-info btn-sm">
                                          convert to m<sup>2</sup></button></td>
                             </tr>
-
-                            <tr>
-                                <td>3.</td>
-                                <td>Parallelogram</td>
-                                <td> <span id="parallelogram-area">00</span> cm<sup>2</sup></td>
-                                <td class="p-3"><button class="btn btn-info btn-sm">
-                                         convert to m<sup>2</sup></button></td>
-                            </tr>
-
-                            <tr>
-                                <td>4.</td>
-                                <td>Rhombus</td>
-                                <td> <span id="rhombus-area">00</span> cm<sup>2</sup></td>
-                                <td class="p-3"><button class="btn btn-info btn-sm">
-                                         convert to m<sup>2</sup></button></td>
-                            </tr>
-                            
-                            <tr>
-                                <td>5.</td>
-                                <td>Pentagon</td>
-                                <td> <span id="pentagon-area">00</span> cm<sup>2</sup></td>
-                                <td class="p-3"><button class="btn btn-info btn-sm">
-                                         convert to m<sup>2</sup></button></td>
-                            </tr>
-
-                            <tr>
-                                <td>6.</td>
-                                <td>Ellipse</td>
-                                <td> <span id="ellipse-area">00</span> cm<sup>2</sup></td>
-                                <td class="p-3"><button class="btn btn-info btn-sm">
-                                         convert to m<sup>2</sup></button></td>
-                            </tr>
-
                         </table>
                     </div>
                 </div>
@@ -154,12 +116,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Rhombus</h5>
                         <p class="card-text">Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="d1" id="rhombus-d1">
-                            <span class="input-group-text">cm</span>
-                            <input type="text" class="form-control" placeholder="d2" id="rhombus-d2">
-                            <span class="input-group-text">cm</span>
-                        </div>
+                        <p class="card-text">d<sub>1</sub> = 16 cm, d<sub>2</sub> = 8 cm</p>
+                        
                         <a href="#" id="btn-calculate-rhombus" class="btn btn-info d-grid col-12">Calculate</a>
                     </div>
                 </div>
@@ -172,12 +130,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pentagon</h5>
                         <p class="card-text">Area (A) = 0.5 * p * b</p>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="p" id="pentagon-p">
-                            <span class="input-group-text">cm</span>
-                            <input type="text" class="form-control" placeholder="b" id="pentagon-b">
-                            <span class="input-group-text">cm</span>
-                        </div>
+                        <p class="card-text">p = 6cm, b = 10cm</p>
                         <a href="#" id="btn-calculate-pentagon" class="btn btn-info d-grid col-12">Calculate</a>
                     </div>
                 </div>
@@ -190,12 +143,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Ellipse</h5>
                         <p class="card-text">Area (A) = &pi; * a * b</p>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="a" id="ellipse-a">
-                            <span class="input-group-text">cm</span>
-                            <input type="text" class="form-control" placeholder="b" id="ellipse-b">
-                            <span class="input-group-text">cm</span>
-                        </div>
+                        <p class="card-text">a = 10cm, b = 4cm</p>
                         <a href="#" id="btn-calculate-ellipse" class="btn btn-info d-grid col-12">Calculate</a>
                     </div>
                 </div>

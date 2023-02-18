@@ -9,20 +9,16 @@ document.getElementById('btn-calculate-triangle').addEventListener('click', func
     const triangleArea = 0.5 * triangleBase * triangleHeight;
     const triangleAreaFixed = triangleArea.toFixed(2);
 
-    if(triangleBase === ''|| triangleBase === null){
-        alert('Please fill the input field');
+    if(triangleBase == '' && triangleHeight == ''){
+        alert('Input field can not be empty');
     }
+    if(isNaN(triangleBase) && isNaN(triangleHeight)){
+        alert('Enter a number');
+    } 
     else{
         setTextElementValueById('triangle-area', triangleAreaFixed);
-    }
-
-    // if(isNaN(triangleBase) && isNaN(triangleHeight)){
-    //     alert('Enter a number');
-    // } 
-    // else{
-    //     setTextElementValueById('triangle-area', triangleAreaFixed);
       
-    // }    
+    }    
 
 })
 
@@ -33,6 +29,10 @@ document.getElementById('btn-calculate-rectangle').addEventListener('click', fun
 
     const rectangleArea = rectangleWidth * rectangleLength;
     const rectangleAreaFixed = rectangleArea.toFixed(2);
+
+    if(rectangleWidth == '' && rectangleLength == ''){
+        alert('Input field can not be empty')
+    }
 
     if(isNaN(rectangleWidth) && isNaN(rectangleLength)){
         alert('Enter a number');
@@ -46,43 +46,27 @@ document.getElementById('btn-calculate-rectangle').addEventListener('click', fun
 })
 
 document.getElementById('btn-calculate-parallelogram').addEventListener('click', function(){
-    const paraBase = getInputFieldValueById('para-base');
-    const paraHeight = getInputFieldValueById('para-height');
-
-    const parallelogramArea = paraBase * paraHeight;
-    const parallelogramAreaFixed = parallelogramArea.toFixed(2);
-
-    setTextElementValueById('parallelogram-area', parallelogramAreaFixed);
+    var table = document.createElement('table');
+    table.innerHTML = "<tr><td>3.</td><td>Parallelogram-</td><td>120cm<sup>2</sup></td></tr>";
+    document.getElementById("add-iteam").appendChild(table);
 })
 
 document.getElementById('btn-calculate-rhombus').addEventListener('click', function(){
-    const rhombusD1 = getInputFieldValueById('rhombus-d1');
-    const rhombusD2 = getInputFieldValueById('rhombus-d2');
-
-    const rhombusArea = 0.5 * rhombusD1 * rhombusD2;
-    const rhombusAreaFixed = rhombusArea.toFixed(2);
-
-    setTextElementValueById('rhombus-area', rhombusAreaFixed);
+    var table = document.createElement('table');
+    table.innerHTML = "<tr><td>4.</td><td>Rhombus-</td><td>64cm<sup>2</sup></td></tr>";
+    document.getElementById("add-iteam").appendChild(table);
 })
 
 document.getElementById('btn-calculate-pentagon').addEventListener('click', function(){
-    const pentagonP = getInputFieldValueById('pentagon-p');
-    const pentagonB = getInputFieldValueById('pentagon-b');
-
-    const pentagonArea = 0.5 * pentagonP * pentagonB;
-    const pentagonAreaFixed = pentagonArea.toFixed(2);
-
-    setTextElementValueById('pentagon-area', pentagonAreaFixed);
+    var table = document.createElement('table');
+    table.innerHTML = "<tr><td>5.</td><td>Pentagon-</td><td>30cm<sup>2</sup></td></tr>";
+    document.getElementById("add-iteam").appendChild(table);
 })
 
 document.getElementById('btn-calculate-ellipse').addEventListener('click', function(){
-    const ellipseA = getInputFieldValueById('ellipse-a');
-    const ellipseB = getInputFieldValueById('ellipse-b');
-
-    const ellipseArea = 3.14 * ellipseA * ellipseB;
-    const ellipseAreaFixed = ellipseArea.toFixed(2);
-
-    setTextElementValueById('ellipse-area', ellipseAreaFixed);
+    var table = document.createElement('table');
+    table.innerHTML = "<tr><td>6.</td><td>Ellipse-</td><td>125.6cm<sup>2</sup></td></tr>";
+    document.getElementById("add-iteam").appendChild(table);
 })
 
 
