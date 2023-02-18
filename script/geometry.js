@@ -7,7 +7,15 @@ document.getElementById('btn-calculate-triangle').addEventListener('click', func
     const triangleArea = 0.5 * triangleBase * triangleHeight;
     const triangleAreaFixed = triangleArea.toFixed(2);
 
-    setTextElementValueById('triangle-area', triangleAreaFixed);
+    // if(triangleBase.value == '' || triangleBase.value == null || triangleHeight.value == '' || triangleHeight.value == null){
+    //     alert('Base & Height is required');
+    //     return false;
+    // } 
+    // else{
+        setTextElementValueById('triangle-area', triangleAreaFixed);
+      
+    // }    
+
 })
 
 document.getElementById('btn-calculate-rectangle').addEventListener('click', function(){
