@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <title>Geometry Genius</title>
 </head>
@@ -14,7 +15,7 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="#">Interactive <br> <span class="fw-light fs-6">Geometry
+                <a class="navbar-brand fw-bold" href="index.html">Interactive <br> <span class="fw-light fs-6">Geometry
                         Genius</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -34,7 +35,7 @@
         <div class="row row-cols-1 row-cols-md-4 g-2 g-md-3">
             <div class="col">
                 <!-- card strat-->
-                <div class="card" style="width: 18rem;">
+                <div id="random-triangle-color" class="card" style="width: 18rem; height: 450px;">
                     <img src="./images/triangle.png" class="card-img-top p-5 w-100" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Triangle</h5>
@@ -42,37 +43,37 @@
                             0.5 * b *
                             h</p>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="b">
+                            <input type="text" class="form-control" placeholder="b" id="triangle-base">
                             <span class="input-group-text">cm</span>
-                            <input type="text" class="form-control" placeholder="h">
+                            <input type="text" class="form-control" placeholder="h" id="triangle-height">
                             <span class="input-group-text">cm</span>
                         </div>
-                        <a href="#" class="btn btn-info d-grid col-12">Calculate</a>
+                        <a href="#" id="btn-calculate-triangle" class="btn btn-info d-grid col-12">Calculate</a>
                     </div>
                 </div>
                 <!-- card end-->
             </div>
             <div class="col">
                 <!-- card start-->
-                <div class="card" style="width: 18rem;">
+                <div id="random-rectangle-color" class="card" style="width: 18rem; height: 450px;">
                     <img src="./images/rectangle.png" class="card-img-top p-5 w-100" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Rectangle</h5>
-                        <p class="card-text">Area (A) = w * I</p>
+                        <p class="card-text">Area (A) = w * l</p>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="w">
+                            <input type="text" class="form-control" placeholder="w" id="rectangle-width">
                             <span class="input-group-text">cm</span>
-                            <input type="text" class="form-control" placeholder="I">
+                            <input type="text" class="form-control" placeholder="l" id="rectangle-length">
                             <span class="input-group-text">cm</span>
                         </div>
-                        <a href="#" class="btn btn-info d-grid col-12">Calculate</a>
+                        <a href="#" id="btn-calculate-rectangle" class="btn btn-info d-grid col-12">Calculate</a>
                     </div>
                 </div>
                 <!-- card end-->
             </div>
             <div class="col">
                 <!-- card start-->
-                <div class="card" style="width: 18rem;">
+                <div id="random-parallelogram-color" class="card" style="width: 18rem; height: 450px;">
                     <img src="./images/parallelogram.png" class="card-img-top p-5 w-100" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Parallelogram</h5>
@@ -85,7 +86,7 @@
             </div>
             <div class="col">
                 <!-- Area Calculation card start-->
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; height: 450px;">
                     <div class="card-body">
                         <h5 class="card-title">Area Calculation</h5>
 
@@ -93,28 +94,65 @@
                             <tr>
                                 <td>1.</td>
                                 <td>Triangle</td>
-                                <td>12cm<sup>2</sup></td>
-                                <td><button class="btn btn-outline-primary">convert to m<sup>2</sup></button></td>
+                                <td><span id="triangle-area">12</span>cm<sup>2</sup></td>
+                                <td><button class="btn btn-info btn-sm">convert to m<sup>2</sup></button></td>
                             </tr>
                             <tr>
                                 <td>2.</td>
                                 <td>Rectangle</td>
-                                <td>1225cm<sup>2</sup></td>
-                                <td><button class="btn btn-outline-primary">convert to
-                                        m<sup>2</sup></button></td>
+                                <td> <span id="rectangle-area">1200</span> cm<sup>2</sup></td>
+                                <td><button class="btn btn-info btn-sm">
+                                         convert to m<sup>2</sup></button></td>
                             </tr>
+
+                            <tr>
+                                <td>3.</td>
+                                <td>Parallelogram</td>
+                                <td> <span id="parallelogram-area">1200</span> cm<sup>2</sup></td>
+                                <td><button class="btn btn-info btn-sm">
+                                         convert to m<sup>2</sup></button></td>
+                            </tr>
+
+                            <tr>
+                                <td>4.</td>
+                                <td>Rhombus</td>
+                                <td> <span id="rhombus-area">1200</span> cm<sup>2</sup></td>
+                                <td><button class="btn btn-info btn-sm">
+                                         convert to m<sup>2</sup></button></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>5.</td>
+                                <td>Pentagon</td>
+                                <td> <span id="pentagon-area">1200</span> cm<sup>2</sup></td>
+                                <td><button class="btn btn-info btn-sm">
+                                         convert to m<sup>2</sup></button></td>
+                            </tr>
+
+                            <tr>
+                                <td>5.</td>
+                                <td>Pentagon</td>
+                                <td> <span id="pentagon-area">1200</span> cm<sup>2</sup></td>
+                                <td><button class="btn btn-info btn-sm">
+                                         convert to m<sup>2</sup></button></td>
+                            </tr>
+
+                            <tr>
+                                <td>6.</td>
+                                <td>Ellipse</td>
+                                <td> <span id="ellipse-area">1200</span> cm<sup>2</sup></td>
+                                <td><button class="btn btn-info btn-sm">
+                                         convert to m<sup>2</sup></button></td>
+                            </tr>
+
                         </table>
-
-
-
-
                     </div>
                 </div>
                 <!-- Area Calculation card end-->
             </div>
             <div class="col">
                 <!-- card start-->
-                <div class="card" style="width: 18rem;">
+                <div id="random-rhombus-color" class="card" style="width: 18rem; height: 450px;">
                     <img src="./images/rhombus.png" class="card-img-top p-5 w-100" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Rhombus</h5>
@@ -127,7 +165,7 @@
             </div>
             <div class="col">
                 <!-- card start-->
-                <div class="card" style="width: 18rem;">
+                <div id="random-pentagon-color" class="card" style="width: 18rem; height: 450px;">
                     <img src="./images/pentagon.png" class="card-img-top p-5 w-100" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Pentagon</h5>
@@ -140,11 +178,11 @@
             </div>
             <div class="col">
                 <!-- card start-->
-                <div class="card" style="width: 18rem;">
+                <div id="random-ellipse-color" class="card" style="width: 18rem; height: 450px;">
                     <img src="./images/ellipse.png" class="card-img-top p-5 w-100" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Ellipse</h5>
-                        <p class="card-text">Area (A) = 3.14 * a * b</p>
+                        <p class="card-text">Area (A) = &pi; * a * b</p>
                         <p class="card-text"> a = 10cm, b = 4cm</p>
                         <a href="#" class="btn btn-info d-grid col-12">Calculate</a>
                     </div>
@@ -156,7 +194,8 @@
         </div>
     </div>
 
-
+    <script src="script/utilities.js"></script>
+     <script src="script/geometry.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
