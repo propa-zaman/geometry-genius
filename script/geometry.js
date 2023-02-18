@@ -9,12 +9,18 @@ document.getElementById('btn-calculate-triangle').addEventListener('click', func
     const triangleArea = 0.5 * triangleBase * triangleHeight;
     const triangleAreaFixed = triangleArea.toFixed(2);
 
-    // if(triangleBase.value == '' || triangleBase.value == null || triangleHeight.value == '' || triangleHeight.value == null){
-    //     alert('Base & Height is required');
-    //     return false;
+    if(triangleBase === ''|| triangleBase === null){
+        alert('Please fill the input field');
+    }
+    else{
+        setTextElementValueById('triangle-area', triangleAreaFixed);
+    }
+
+    // if(isNaN(triangleBase) && isNaN(triangleHeight)){
+    //     alert('Enter a number');
     // } 
     // else{
-        setTextElementValueById('triangle-area', triangleAreaFixed);
+    //     setTextElementValueById('triangle-area', triangleAreaFixed);
       
     // }    
 
@@ -28,7 +34,15 @@ document.getElementById('btn-calculate-rectangle').addEventListener('click', fun
     const rectangleArea = rectangleWidth * rectangleLength;
     const rectangleAreaFixed = rectangleArea.toFixed(2);
 
-    setTextElementValueById('rectangle-area', rectangleAreaFixed);
+    if(isNaN(rectangleWidth) && isNaN(rectangleLength)){
+        alert('Enter a number');
+    } 
+    else{
+        setTextElementValueById('rectangle-area', rectangleAreaFixed);
+      
+    }  
+
+    
 })
 
 document.getElementById('btn-calculate-parallelogram').addEventListener('click', function(){
@@ -45,7 +59,7 @@ document.getElementById('btn-calculate-rhombus').addEventListener('click', funct
     const rhombusD1 = getInputFieldValueById('rhombus-d1');
     const rhombusD2 = getInputFieldValueById('rhombus-d2');
 
-    const rhombusArea = rhombusD1 * rhombusD2;
+    const rhombusArea = 0.5 * rhombusD1 * rhombusD2;
     const rhombusAreaFixed = rhombusArea.toFixed(2);
 
     setTextElementValueById('rhombus-area', rhombusAreaFixed);
@@ -55,7 +69,7 @@ document.getElementById('btn-calculate-pentagon').addEventListener('click', func
     const pentagonP = getInputFieldValueById('pentagon-p');
     const pentagonB = getInputFieldValueById('pentagon-b');
 
-    const pentagonArea = pentagonP * pentagonB;
+    const pentagonArea = 0.5 * pentagonP * pentagonB;
     const pentagonAreaFixed = pentagonArea.toFixed(2);
 
     setTextElementValueById('pentagon-area', pentagonAreaFixed);
@@ -65,7 +79,7 @@ document.getElementById('btn-calculate-ellipse').addEventListener('click', funct
     const ellipseA = getInputFieldValueById('ellipse-a');
     const ellipseB = getInputFieldValueById('ellipse-b');
 
-    const ellipseArea = ellipseA * ellipseB;
+    const ellipseArea = 3.14 * ellipseA * ellipseB;
     const ellipseAreaFixed = ellipseArea.toFixed(2);
 
     setTextElementValueById('ellipse-area', ellipseAreaFixed);
